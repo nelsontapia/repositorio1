@@ -32,8 +32,8 @@ public class MainApp {
         return new CreateNewLead(driver);
     }
 
-    public CreateCampaign goToCreateNewCampaign(){
-        return new CreateCampaign(driver);
+    public CreateNewCampaign goToCreateNewCampaign(){
+        return new CreateNewCampaign(driver);
     }
 
     public CreateNewAccount goToCreateNewAccounts(){

@@ -16,7 +16,7 @@ public class CampaignHome {
 
     @FindBy(xpath = "//input[@name='new']")
     @CacheLookup
-    private WebElement newLeadLink;
+    private WebElement newCampLink;
 
     public CampaignHome(WebDriver driver){
         this.driver = driver;
@@ -24,10 +24,10 @@ public class CampaignHome {
         PageFactory.initElements(driver, this);
     }
 
-    /*
+
     public SetupCampaign clickNew(){
-        newLeadLink.click();
-        return new SetupLead(driver);
+        newCampLink.click();
+        return new SetupCampaign(driver);
     }
-    */
+
 }

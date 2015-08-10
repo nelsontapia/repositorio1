@@ -21,8 +21,8 @@ public class CreateNewCampaign extends CampaignsForm {
         PageFactory.initElements(driver, this);
     }
 
-    public CreateNewLead saveBtnClick(){
+    public CreateNewCampaign saveBtnClick(){
         saveBtn.click();
-        return new CreateNewLead(driver);
+        return new CreateNewCampaign(driver);
     }
 }

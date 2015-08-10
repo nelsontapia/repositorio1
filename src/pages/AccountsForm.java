@@ -1,12 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -20,14 +17,11 @@ public class AccountsForm {
     private static final String lead_Status = "lea13";
     //private String name_salutationlea2_option = "Mr.";
 
-    @FindBy(id = name_salutationlea2)
+    @FindBy(id = "acc2")
     @CacheLookup
-    private WebElement leadSalutation;
+    private WebElement accountName;
 
-    @FindBy(id = "name_firstlea2")
-    @CacheLookup
-    private WebElement leadFirstName;
-
+    /*
     @FindBy(id = "name_lastlea2")
     @CacheLookup
     private WebElement leadLastName;
@@ -49,12 +43,14 @@ public class AccountsForm {
         select.selectByVisibleText(salutation);
         return this;
     }
+    */
 
-    public AccountsForm setFirstNameLead(String newFirstName){
-        leadFirstName.clear();
-        leadFirstName.sendKeys(newFirstName);
+    public AccountsForm setAccountName(String newAccountName){
+        accountName.clear();
+        accountName.sendKeys(newAccountName);
         return this;
     }
+    /*
 
     public AccountsForm setSecondNameLead(String newSecondName){
         leadLastName.clear();
@@ -76,5 +72,6 @@ public class AccountsForm {
         select.selectByVisibleText(sLeadStatus);
         return this;
     }
+    */
 
 }

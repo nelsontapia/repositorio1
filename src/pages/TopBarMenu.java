@@ -18,7 +18,7 @@ public class TopBarMenu {
     @CacheLookup
     private WebElement leadTablink;
 
-    @FindBy(id = "Account_Tab")
+    @FindBy(linkText = "Accounts")
     @CacheLookup
     private WebElement accountTablink;
 
@@ -26,7 +26,7 @@ public class TopBarMenu {
     @CacheLookup
     private WebElement orderTablink;
 
-    @FindBy(id = "Campaign_Tab")
+    @FindBy(linkText = "Campaigns")
     @CacheLookup
     private WebElement campaingnTablink;
 

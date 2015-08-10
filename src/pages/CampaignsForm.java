@@ -1,12 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -20,14 +17,11 @@ public class CampaignsForm {
     private static final String lead_Status = "lea13";
     //private String name_salutationlea2_option = "Mr.";
 
-    @FindBy(id = name_salutationlea2)
+    @FindBy(id = "cpn1")
     @CacheLookup
-    private WebElement leadSalutation;
+    private WebElement campaignName;
 
-    @FindBy(id = "name_firstlea2")
-    @CacheLookup
-    private WebElement leadFirstName;
-
+/*
     @FindBy(id = "name_lastlea2")
     @CacheLookup
     private WebElement leadLastName;
@@ -39,8 +33,8 @@ public class CampaignsForm {
     @FindBy(id = lead_Status)
     @CacheLookup
     private WebElement leadStatus;
-
-
+*/
+/*
     public CampaignsForm setLeadSalutation(String salutation) {
         wait.until(ExpectedConditions
                 .visibilityOf(leadSalutation));
@@ -49,13 +43,15 @@ public class CampaignsForm {
         select.selectByVisibleText(salutation);
         return this;
     }
+    */
 
-    public CampaignsForm setFirstNameLead(String newFirstName){
-        leadFirstName.clear();
-        leadFirstName.sendKeys(newFirstName);
+    public CampaignsForm setCampaignName(String campName){
+        campaignName.clear();
+        campaignName.sendKeys(campName);
         return this;
     }
 
+    /*
     public CampaignsForm setSecondNameLead(String newSecondName){
         leadLastName.clear();
         leadLastName.sendKeys(newSecondName);
@@ -76,5 +72,6 @@ public class CampaignsForm {
         select.selectByVisibleText(sLeadStatus);
         return this;
     }
+    */
 
 }
