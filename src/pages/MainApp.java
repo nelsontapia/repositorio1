@@ -23,4 +23,20 @@ public class MainApp {
     public LeadHome goToLeadHome(){
         return new LeadHome(driver);
     }
+
+    public SetupLead goToSetupLead(){
+        return new SetupLead(driver);
+    }
+
+    public CreateNewLead goToCreateNewLead(){
+        return new CreateNewLead(driver);
+    }
+
+    public CreateCampaign goToCreateNewCampaign(){
+        return new CreateCampaign(driver);
+    }
+
+    public CreateNewAccount goToCreateNewAccounts(){
+        return new CreateNewAccount(driver);
+    }
 }

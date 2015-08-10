@@ -26,6 +26,10 @@ public class TopBarMenu {
     @CacheLookup
     private WebElement orderTablink;
 
+    @FindBy(id = "Campaign_Tab")
+    @CacheLookup
+    private WebElement campaingnTablink;
+
     public TopBarMenu(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 15);
@@ -35,5 +39,15 @@ public class TopBarMenu {
     public LeadHome clickTabLead(){
         leadTablink.click();
         return new LeadHome(driver);
+    }
+
+    public AccountHome clickTabAccounts(){
+        accountTablink.click();
+        return new AccountHome(driver);
+    }
+
+    public CampaignHome clickTabCampains(){
+        campaingnTablink.click();
+        return new CampaignHome(driver);
     }
 }

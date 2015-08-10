@@ -18,10 +18,25 @@ public class AddProject {
                     .clickLoginBtn();
             //mainApp.goToBarMenu();
             TopBarMenu topBarMenu = mainApp.goToBarMenu();
+            LeadHome leadHomePage = topBarMenu.clickTabLead();
             //ProjectContainer newLead = topBarMenu.clickTabLead();
-            LeadHome newLead = topBarMenu.clickTabLead();
+            //LeadHome newLead = topBarMenu.clickTabLead();
+            leadHomePage.clickNew();
 
-            newLead.clickNew();
+            //mainApp.goToSetupLead();
+            CreateNewLead newLead = mainApp.goToCreateNewLead();
+
+            newLead.setFirstNameLead("Nelson");
+            newLead.setSecondNameLead("Tapia");
+            newLead.setLeadSalutation("Mr.");
+            newLead.setLeadCompany("CompanyTest");
+            newLead.setLeadStatus("Closed - Converted");
+
+            newLead.saveBtnClick();
+
+
+            TopBarMenu topBarMenu1 = mainApp.goToBarMenu();
+            topBarMenu1.clickTabLead();
 
         }
 
